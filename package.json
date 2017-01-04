@@ -1,7 +1,7 @@
 {
-  "name": "spa-sm",
-  "version": "1.2.1",
-  "description": "Single Page Application State Manager - 'A bit too much structure' for single page web apps",
+  "name": "sparou",
+  "version": "2.0.0",
+  "description": "Single Page Application router",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,10 +9,6 @@
   "scripts": {
     "start": "nodemon demo/index.js",
     "test": "mocha -R progress --require babel-register --recursive test",
-    "prebuild": "mkdir -p dist",
-    "build": "browserify -s spasm -o dist/spasm.js index.js",
-    "postbuild": "uglifyjs -o dist/spasm.js dist/spasm.js",
-    "prepublish": "npm run build",
     "autotest": "npm run test -- --watch"
   },
   "keywords": [
@@ -25,7 +21,6 @@
   "dependencies": {
     "babel-preset-es2015": "^6.16.0",
     "babelify": "^7.3.0",
-    "js-atom": "^0.4.0",
     "uglifyify": "^3.0.4"
   },
   "devDependencies": {
